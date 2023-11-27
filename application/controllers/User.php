@@ -44,7 +44,7 @@ class User extends CI_Controller
 
     $this->form_validation->set_rules(
       'nama',
-      'Nama Lengkap',
+      'Nama Lengkap', 
       'required|trim',
       [
         'required' => 'Nama tidak Boleh Kosong'
