@@ -28,7 +28,6 @@
                 <div class="col-sm-6">
                   <input type="password" class="form-control form-control-user" id="password2" name="password2"
                     placeholder="Ulangi Password">
-                  101
                   <?= form_error('password2', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
               </div>
@@ -38,11 +37,10 @@
             </form>
             <hr>
             <div class="text-center">
-              <a class="small" href="<?=
-              base_url('autentifikasi/lupaPassword'); ?>">Lupa Password?</a>
+              <a class="small" href="<?= base_url('autentifikasi/lupaPassword'); ?>">Lupa Password?</a>
             </div>
-            <div class="text-center">
-              Sudah Menjadi Member?<a class="small" href="<?= base_url('autentifikasi'); ?>"> Login!</a>
+            <div class="text-center">Sudah Menjadi Member?<a class="small"
+                href="<?= base_url('autentifikasi'); ?>">Login!</a>
             </div>
           </div>
         </div>

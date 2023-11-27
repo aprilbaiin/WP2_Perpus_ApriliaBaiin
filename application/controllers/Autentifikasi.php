@@ -2,29 +2,16 @@
 
 class Autentifikasi extends CI_Controller
 {
+  
   public function index()
   {
     //jika statusnya sudah login, maka tidak bisa mengakses halaman login alias dikembalikan ke tampilan user
     if ($this->session->userdata('email')) {
       redirect('admin');
     }
-    $this->form_validation->set_rules(
-      'email',
-      'Alamat Email',
-      'required|trim|valid_email',
-      [
-        'required' => 'Email Harus diisi!!',
-        'valid_email' => 'Email Tidak Benar!!'
-      ]
-    );
-    $this->form_validation->set_rules(
-      'password',
-      'Password',
-      'required|trim',
-      [
-        'required' => 'Password Harus diisi'
-      ]
-    );
+    
+    $this->form_validation->set_rules('email', 'Alamat Email','required|trim|valid_email', ['required' => 'Email Harus diisi!!', 'valid_email' => 'Email Tidak Benar!!']);
+    $this->form_validation->set_rules('password', 'Password', 'required|trim',['required' => 'Password Harus diisi']);
     if ($this->form_validation->run() == false) {
       $data['judul'] = 'Login';
       $data['user'] = '';
